@@ -24,3 +24,17 @@ Run the script using Python 3:
 ```bash
 python tools/sql_to_json.py
 ```
+
+### 2. `validate_sql.py`
+This script checks the formatting and syntax of `db/wilayah_kodepos.sql` to prevent parsing or import errors.
+
+* **Checks Performed:**
+  * Validates that standard administrative codes format (`xx.xx.xx.xxxx`) matches expected standard syntax.
+  * Verifies primary table structure definition existence (`CREATE TABLE wilayah_kodepos`).
+  * Assures database loading optimizations are in place (`START TRANSACTION`, `COMMIT`, `DISABLE KEYS`, `ENABLE KEYS`).
+
+#### Usage
+Run the validation script using Python 3:
+```bash
+python tools/validate_sql.py
+```

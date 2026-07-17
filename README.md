@@ -29,6 +29,7 @@ Data wilayah vs kodepos ada di `db/wilayah_kodepos.sql`, mencakup data kodepos *
 | `json/wilayah_kodepos.json` | Mappings hasil konversi dalam format JSON |
 | `json/wilayah_kodepos.min.json` | Mappings hasil konversi dalam format minified JSON |
 | `tools/sql_to_json.py` | Skrip Python untuk konversi data SQL ke JSON |
+| `tools/validate_sql.py` | Skrip Python untuk memvalidasi struktur dan sintaksis data SQL |
 | `tools/README.md` | Panduan penggunaan skrip pendukung |
 
 
