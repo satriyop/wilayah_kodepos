@@ -26,6 +26,10 @@ Data wilayah vs kodepos ada di `db/wilayah_kodepos.sql`, mencakup data kodepos *
 | `db/wilayah_kodepos.sql` | Data kodepos terkini, sesuai Kepmendagri No 300.2.2-2138 Tahun 2025 |
 | `db/archive/wilayah_kodepos_2023.sql` | Data kodepos lama, sesuai Kepmendagri No 100.1.1-6117 Tahun 2022 |
 | `src/pos-data.csv` | Data sumber kodepos dalam format CSV |
+| `json/wilayah_kodepos.json` | Mappings hasil konversi dalam format JSON |
+| `json/wilayah_kodepos.min.json` | Mappings hasil konversi dalam format minified JSON |
+| `tools/sql_to_json.py` | Skrip Python untuk konversi data SQL ke JSON |
+| `tools/README.md` | Panduan penggunaan skrip pendukung |
 
 
 ## STRUKTUR DATABASE
@@ -77,6 +81,7 @@ WHERE wk.kodepos = '23771';
 
 
 ## CHANGE LOG
+- [2026-07-17] Menambahkan skrip python `tools/sql_to_json.py` untuk konversi data SQL ke JSON dan `tools/README.md`
 - [2026-07-13] optimasi file SQL: batch insert 1.000 baris, `START TRANSACTION/COMMIT`, `DISABLE/ENABLE KEYS`, `ENGINE=InnoDB`, `utf8mb4`
 - [2026-02-16] menambahkan tautan terkait
 - [2025-11-12] update README.md
@@ -87,9 +92,7 @@ WHERE wk.kodepos = '23771';
 
 ## TODO
 - Menambahkan data kodepos per pulau di Indonesia, kode pulau vs kodepos
-- Membuat aplikasi contoh penerapan data kodepos vs kode wilayah Indonesia
 - Verifikasi dan validasi kelengkapan data
-
 
 ## DONATION
 - untuk donasi via transfer
